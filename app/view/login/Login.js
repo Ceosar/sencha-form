@@ -1,6 +1,3 @@
-// const Chance = require('chance');
-// const chance = new Chance();
-
 Ext.define('newapp.view.Login', {
     extend: 'Ext.form.Panel',
     xtype: 'loginform',
@@ -29,7 +26,6 @@ Ext.define('newapp.view.Login', {
             handler: function () {
                 const form = this.up('form').getForm();
                 if (form.isValid()) {
-                    console.log(1);
                     openDataWindow();
                 } else {
                     Ext.Msg.alert('Ошибка', 'Не заполнены обязательные поля!');
@@ -40,8 +36,7 @@ Ext.define('newapp.view.Login', {
 });
 
 function openDataWindow() {
-    // const data = generateFakeData();
-    const data = {data:1}
+    const data = generateFakeData();
 
     const grid = Ext.create('Ext.grid.Panel', {
         store: Ext.create('Ext.data.Store', {
@@ -88,9 +83,10 @@ function openDataWindow() {
 
 function generateFakeData() {
     return Array.from({ length: 10 }, () => ({
-        name: chance.name()
+        name: faker.person.firstName()
     }));
 }
+
 
 
 function openMainPanel(selectedRecords) {
