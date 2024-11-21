@@ -10,4 +10,4 @@ Before start run:
 if last command is invalid, delete `/faker-browser.js`,
 and run `browserify faker-umd.js -o faker-browser.js` again.
 
-Command for start: `sencha app watch`
+Command for dev start: `sencha app watch`
