@@ -1,5 +1,5 @@
 ﻿# sencha-form
-After start run:
+Before start run:
 
 `npm install @faker-js/faker --save-dev`
 &&
